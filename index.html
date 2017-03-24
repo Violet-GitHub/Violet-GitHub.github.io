@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://localhost:4000"></form>
@@ -167,34 +167,27 @@
 </li>
 <li><p>执行<strong>brew install node</strong> 命令出错</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error: Unknown command: cask</div></pre></td></tr></table></figure>
+<p>  <strong>问题原因:</strong>打开<a href="https://github.com/caskroom/homebrew-cask" target="_blank" rel="external">官网</a>，在<em>Reporting bugs</em>区域解释这是一个bug<br><strong>解决办法:</strong>在命令行输入指令</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd $(brew --repo) </div><div class="line">git fetch</div><div class="line">git reset --hard origin/master</div><div class="line">brew update</div></pre></td></tr></table></figure>
+<ul>
+<li><p>但执行brew update指令时，命令行一直无响应</p>
+<p>  网上找了个<a href="https://www.logcg.com/archives/1301.html" target="_blank" rel="external">博客</a>，有关于这个问题的描述。但我没有按照这个博客去操作，直接在命令行输入安装MacDown的命令，很意外的下载成功了。也就是说brew update命令未执行的情况下，下载成功的。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install macdown</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>    **问题原因:**打开[官网](https://github.com/caskroom/homebrew-cask)，在*Reporting bugs*区域解释这是一个bug  
-**解决办法:**在命令行输入指令
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd $(brew --repo) </div><div class="line">git fetch</div><div class="line">git reset --hard origin/master</div><div class="line">brew update</div></pre></td></tr></table></figure>
-
-
-    * 但执行brew update指令时，命令行一直无响应
-
-        网上找了个[博客](https://www.logcg.com/archives/1301.html)，有关于这个问题的描述。但我没有按照这个博客去操作，直接在命令行输入安装MacDown的命令，很意外的下载成功了。也就是说brew update命令未执行的情况下，下载成功的。
-
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install macdown</div></pre></td></tr></table></figure>
-</code></pre><ul>
-<li>写博客 <ul>
-<li>输入指令，新建博客文章</li>
-</ul>
+</li>
+<li><p>写博客 </p>
+<ul>
+<li><p>输入指令，新建博客文章</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new MacDown＋Hexo＋GitHub</div></pre></td></tr></table></figure>
+</li>
+<li><p>写博客</p>
+<p>  在<strong>blog/source/_posts/</strong>目录下，找到刚刚新建的博客文章，用MacDown打开，运用markdown语法编写</p>
 </li>
 </ul>
-<pre><code>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new MacDown＋Hexo＋GitHub</div></pre></td></tr></table></figure>
-
-
-* 写博客
-
-    在**blog/source/_posts/**目录下，找到刚刚新建的博客文章，用MacDown打开，运用markdown语法编写
-</code></pre><ul>
+</li>
 <li><p>发布博客</p>
 <ul>
 <li><p>编译并部署到github上</p>
@@ -207,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/24/MacDown＋Hexo＋GitHub/" data-id="cj0n9s2xa000001t1ovvf9st5" class="article-share-link">Partager</a>
+      <a data-url="http://localhost:4000/2017/03/24/MacDown＋Hexo＋GitHub/" data-id="cj0na0d0b00000ft15vgm2dlj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/23/MarkDown语法快捷键/" data-id="cj0n9s2xf000101t166wdjawr" class="article-share-link">Partager</a>
+      <a data-url="http://localhost:4000/2017/03/23/MarkDown语法快捷键/" data-id="cj0na0d0h00010ft1wlkcrxz3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/22/hello-world/" data-id="cj0n9s2xi000201t1izdl3mhn" class="article-share-link">Partager</a>
+      <a data-url="http://localhost:4000/2017/03/22/hello-world/" data-id="cj0na0d0l00020ft1rofjavct" class="article-share-link">Share</a>
       
       
     </footer>
@@ -331,7 +324,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -360,7 +353,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ziya<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
