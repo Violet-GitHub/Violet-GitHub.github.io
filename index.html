@@ -128,6 +128,10 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure>
 </li>
 <li><p>执行<strong>brew install node</strong> 命令出错</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error: Permission denied - /usr/local/lib/dtrace/node.d</div></pre></td></tr></table></figure>
+<p>  出错原因:安装文件写入到/usr/local的权限不足<br>解决办法:在命令行输入指令，再输入appid的密码，即可授予权限</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R whoami /usr/local</div></pre></td></tr></table></figure>
+<p>  <em>(注意：重新打开的命令行窗口，需要重新授予权限。)</em></p>
 </li>
 </ul>
 <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>进入<a href="https://hexo.io" target="_blank" rel="external">hexo网站</a>，查看安装hexo的指令:  </p>
@@ -176,7 +180,7 @@ hexo d -g
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/24/MacDown＋Hexo＋GitHub/" data-id="cj0n8bysz0000y0t1lhcnwuco" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2017/03/24/MacDown＋Hexo＋GitHub/" data-id="cj0n8ool00000ygt14lddx8a0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,7 +224,7 @@ hexo d -g
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/23/MarkDown语法快捷键/" data-id="cj0n8byt50001y0t1vg1kph9v" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2017/03/23/MarkDown语法快捷键/" data-id="cj0n8ool50001ygt1cabywrmu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +269,7 @@ hexo d -g
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/22/hello-world/" data-id="cj0n8byt80002y0t1jr9n0wd2" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2017/03/22/hello-world/" data-id="cj0n8ool90002ygt1hltbax0n" class="article-share-link">Share</a>
       
       
     </footer>
