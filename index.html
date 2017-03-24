@@ -152,7 +152,7 @@
 <h2 id="将Hexo与github-page关联起来"><a href="#将Hexo与github-page关联起来" class="headerlink" title="将Hexo与github page关联起来"></a>将Hexo与github page关联起来</h2><p>进入<a href="https://hexo.io/docs/setup.html" target="_blank" rel="external">hexo官网配置文件介绍页</a>，查看_config.yml文件的配置详解:  </p>
 <ul>
 <li><p>配置<strong>_config.yml</strong>文件，即可达到关联的目的<br>  文件在执行命令<strong>hexo init blog</strong>时的blog文件下，找到文件的<strong>Deployment</strong>区域，做如下修改  </p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"> 		type: git</div><div class="line"> 		repository: https://github.com/yourname/yourname.github.io.git</div><div class="line"> 		branch: master</div></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">	type: git</div><div class="line">	repository: https://github.com/yourname/yourname.github.io.git</div><div class="line">	branch: master</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h2><p>进入<a href="https://hexo.io/docs/setup.html" target="_blank" rel="external">hexo官网配置文件介绍页</a>，查看_config.yml文件的配置详解:  </p>
@@ -165,28 +165,30 @@
 <li><p>输入指令，查看版本  </p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">macdown -v</div></pre></td></tr></table></figure>
 </li>
-<li><p>执行<strong>brew install node</strong> 命令出错   </p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Error: Unknown command: cask</div><div class="line">```  </div><div class="line">	</div><div class="line">* **出错原因:**  [官网](https://github.com/caskroom/homebrew-cask)说是bug，在eporting bugs区域给出解决办法  </div><div class="line">* **解决办法:**  </div><div class="line">	在命令行输入指令</div></pre></td></tr></table></figure>
-<pre><code>cd $(brew --repo) 
-git fetch
-git reset --hard origin/master
-brew update
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">* 再次出现问题，执行brew update指令，命令行无响应  </div><div class="line">	网上找了个[博客](https://www.logcg.com/archives/1301.html)，有关于这个问题的描述。但我没有按照这个博客去操作，直接在命令行输入安装命令，也下载成功了。也就是说brew update命令未执行。</div></pre></td></tr></table></figure>
-
-brew cask install macdown
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">			</div><div class="line">* 写博客 </div><div class="line">	* 输入指令，新建博客文章</div></pre></td></tr></table></figure>
-</code></pre><p>  hexo new MacDown＋Hexo＋GitHub</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">		</div><div class="line">		博客文章在**blog/source/_posts/**目录下，找到用MacDown打开，运用markdown语法排版</div><div class="line">* 发布博客  	</div><div class="line">	* 编译并部署到github上</div></pre></td></tr></table></figure>
-<p>  hexo d -g<br>  ```        </p>
+<li><p>执行<strong>brew install node</strong> 命令出错</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Error: Unknown command: cask</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
+<pre><code>    * **解决办法:**  
+        在命令行输入指令  
 
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	cd $(brew --repo) </div><div class="line">	git fetch</div><div class="line">	git reset --hard origin/master</div><div class="line">	brew update</div><div class="line">	```  </div><div class="line">	</div><div class="line">* 再次出现问题，执行brew update指令，命令行无响应  </div><div class="line">	网上找了个[博客](https://www.logcg.com/archives/1301.html)，有关于这个问题的描述。但我没有按照这个博客去操作，直接在命令行输入安装命令，也下载成功了。也就是说brew update命令未执行。</div></pre></td></tr></table></figure>
+
+        brew cask install macdown
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">			</div><div class="line">* 写博客 </div><div class="line">	* 输入指令，新建博客文章</div></pre></td></tr></table></figure>
+
+    hexo new MacDown＋Hexo＋GitHub
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">		</div><div class="line">	* 写博客</div><div class="line">	</div><div class="line">		在**blog/source/_posts/**目录下，找到刚刚新建的博客文章，用MacDown打开，运用markdown语法编写</div><div class="line"></div><div class="line">* 发布博客</div><div class="line">	* 编译并部署到github上</div></pre></td></tr></table></figure>
+
+hexo d -g
+```
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/24/MacDown＋Hexo＋GitHub/" data-id="cj0n8w5b70000yut1gvk8a4v0" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2017/03/24/MacDown＋Hexo＋GitHub/" data-id="cj0n99umf0000zlt1frpxxp8v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +232,7 @@ brew cask install macdown
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/23/MarkDown语法快捷键/" data-id="cj0n8w5bd0001yut10cb3ijgn" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2017/03/23/MarkDown语法快捷键/" data-id="cj0n99uml0001zlt1kri9nfxp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -275,7 +277,7 @@ brew cask install macdown
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://localhost:4000/2017/03/22/hello-world/" data-id="cj0n8w5bh0002yut1dyya9mfb" class="article-share-link">Share</a>
+      <a data-url="http://localhost:4000/2017/03/22/hello-world/" data-id="cj0n99umo0002zlt1yejhwfs6" class="article-share-link">Share</a>
       
       
     </footer>
