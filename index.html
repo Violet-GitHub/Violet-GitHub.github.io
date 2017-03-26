@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://violet-github.github.io"></form>
@@ -64,6 +64,65 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-天气＋程序开发" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/26/天气＋程序开发/" class="article-date">
+  <time datetime="2017-03-26T08:55:56.000Z" itemprop="datePublished">2017-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/26/天气＋程序开发/">天气＋程序开发</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+<p><em>先空着，用来一句话概括全文重点</em></p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><hr>
+<ul>
+<li>资源筹备</li>
+<li>技术预研</li>
+<li>架构设计</li>
+<li>数据库设计</li>
+<li>程序bug</li>
+</ul>
+<p><br></p>
+<h2 id="资源筹备"><a href="#资源筹备" class="headerlink" title="资源筹备"></a>资源筹备</h2><hr>
+<ul>
+<li><p>进入<a href="http://smart.weather.com.cn/wzfw/smart/weatherapi.shtml" target="_blank" rel="external">中国天气网</a>申请<strong>SmartWeatherAPI</strong>接口</p>
+<p>  等待周期：1～3周  </p>
+</li>
+<li><p>暂代接口：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://www.weather.com.cn/data/sk/101010100.html</div></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&quot;weatherinfo&quot;:&#123;&quot;city&quot;:&quot;北京&quot;,&quot;cityid&quot;:&quot;101010100&quot;,&quot;temp&quot;:&quot;18&quot;,&quot;WD&quot;:&quot;东南风&quot;,&quot;WS&quot;:&quot;1级&quot;,&quot;SD&quot;:&quot;17%&quot;,&quot;WSE&quot;:&quot;1&quot;,&quot;time&quot;:&quot;17:05&quot;,&quot;isRadar&quot;:&quot;1&quot;,&quot;Radar&quot;:&quot;JC_RADAR_AZ9010_JB&quot;,&quot;njd&quot;:&quot;暂无实况&quot;,&quot;qy&quot;:&quot;1011&quot;,&quot;rain&quot;:&quot;0&quot;&#125;&#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://www.weather.com.cn/data/cityinfo/101010100.html</div></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&quot;weatherinfo&quot;:&#123;&quot;city&quot;:&quot;北京&quot;,&quot;cityid&quot;:&quot;101010100&quot;,&quot;temp1&quot;:&quot;-2℃&quot;,&quot;temp2&quot;:&quot;16℃&quot;,&quot;weather&quot;:&quot;晴&quot;,&quot;img1&quot;:&quot;n0.gif&quot;,&quot;img2&quot;:&quot;d0.gif&quot;,&quot;ptime&quot;:&quot;18:00&quot;&#125;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://violet-github.github.io/2017/03/26/天气＋程序开发/" data-id="cj0qhf5dc0004ubt1w9r3gg45" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-天气" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -100,7 +159,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://violet-github.github.io/2017/03/26/天气/" data-id="cj0qg6m060003tbt1x3xe9npq" class="article-share-link">Partager</a>
+      <a data-url="https://violet-github.github.io/2017/03/26/天气/" data-id="cj0qhf5d00003ubt1hql9djc9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://violet-github.github.io/2017/03/24/Homebrew使用问题集锦/" data-id="cj0qg6lzr0000tbt1c45sgof4" class="article-share-link">Partager</a>
+      <a data-url="https://violet-github.github.io/2017/03/24/Homebrew使用问题集锦/" data-id="cj0qhf5cl0000ubt1x6i800em" class="article-share-link">Share</a>
       
       
     </footer>
@@ -310,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://violet-github.github.io/2017/03/23/MacDown＋Hexo＋GitHub/" data-id="cj0qg6m030002tbt1k1jcz92q" class="article-share-link">Partager</a>
+      <a data-url="https://violet-github.github.io/2017/03/23/MacDown＋Hexo＋GitHub/" data-id="cj0qhf5cs0001ubt1rmh5qjbt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -357,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://violet-github.github.io/2017/03/23/MarkDown语法快捷键/" data-id="cj0qg6lzz0001tbt104137mdf" class="article-share-link">Partager</a>
+      <a data-url="https://violet-github.github.io/2017/03/23/MarkDown语法快捷键/" data-id="cj0qhf5cx0002ubt1ziqlac62" class="article-share-link">Share</a>
       
       
     </footer>
@@ -402,7 +461,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://violet-github.github.io/2017/03/22/hello-world/hello-world/" data-id="cj0qg6m130004tbt121p5dlvl" class="article-share-link">Partager</a>
+      <a data-url="https://violet-github.github.io/2017/03/22/hello-world/hello-world/" data-id="cj0qhf5dw0005ubt1nrdtrazv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -437,9 +496,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/03/26/天气＋程序开发/">天气＋程序开发</a>
+          </li>
         
           <li>
             <a href="/2017/03/26/天气/">天气</a>
@@ -457,10 +520,6 @@
             <a href="/2017/03/23/MarkDown语法快捷键/">MarkDown语法快捷键</a>
           </li>
         
-          <li>
-            <a href="/2017/03/22/hello-world/hello-world/">Hello World</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -474,7 +533,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 紫亚<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
